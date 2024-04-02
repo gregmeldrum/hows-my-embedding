@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <title>How is my Embedding?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 1.3em;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            line-height: 1.3em;
+        }
+        h1 {
+            text-align: center;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        iframe {
+            display: block;
+            margin: 0 auto;
+            border: 5px solid #f0f0f0;
+        }
+        .text {
+            margin-left: 150px;
+            margin-right: 150px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding: 1em;
+        }
+        .section {
+            margin-left: 170px;
+            margin-right: 150px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    </style>
+    <div>
+        <!-- make the image centered and 50% of width-->
+        <img src="assets/embedding.png" alt="Embedding" style="width: 30%; display: block; margin: 40px auto;">
+    </div>
+    <div class="text">
+        <p>
+            How do you know if your embedding model is producing good results? What if you could visualize your embeddings to see structure in terms of density and clustering.
+            Here are some examples of text embedding visualized with a 3 dimensional projection. The embeddings are from different models on a the same set of html documents.
+        </p>
+        <p>
+            As with any dimensional reduction projection, the visualization is not perfect and some information is lost and/or distorted. However, it can give you a good idea of the structure of the embeddings.
+        </p>
+        <p>
+            The plots below are interactive so feel free to zoom in and out and rotate to explore the structure of the embeddings.
+        </p>
+    </div>
+    <div class="section">
+        <h4>Embedding 1: GTE-SMALL</h4>
+        <p>Huggingface <a href="https://huggingface.co/thenlper/gte-small">gte-small</a> embedding with 384 dimensions</p>
+    </div>
+    <iframe src="thenlper-gte-small.html" style="width:1450px; height:750px;"></iframe>
+    <div class="section">
+        <h4>Embedding 2: BGE-BASE-EN-1</h4>
+        <p>Huggingface <a href="https://huggingface.co/BAAI/bge-base-en-v1.5">bge-base-en-1.5</a> embedding with 768 dimensions</p>
+    </div>
+    <iframe src="BAAI-bge-base-en.html" style="width:1450px; height:750px;"></iframe>
+    <div class="section">
+        <h4>Embedding 3: MXBAI-EMBED-LARGE</h4>
+        <p>Huggingface <a href="https://huggingface.co/mixedbread-ai/mxbai-embed-large-v1">mxbai-embed-large-v1</a> embedding with 1024 dimensions</p>
+    </div>
+    <iframe src="mixedbread-ai-mxbai-embed-large-.html" style="width:1450px; height:750px;"></iframe>
+</html>
